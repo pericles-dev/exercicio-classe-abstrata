@@ -24,9 +24,9 @@ public class Company extends TaxPayer {
 	public Double calculateTax() {
 		Double tax = 0.0;
 		if (getNumberOfEmployees() > 10) {
-			tax = getAnnualIncome() + getAnnualIncome() * 0.14;
+			tax =  getAnnualIncome() * 0.14;
 		} else {
-			tax = getAnnualIncome() + getAnnualIncome() * 0.16;
+			tax =  getAnnualIncome() * 0.16;
 		}
 
 		return tax;

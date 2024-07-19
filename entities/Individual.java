@@ -25,9 +25,9 @@ public class Individual extends TaxPayer {
 	public Double calculateTax() {
 		Double tax = 0.0;
 		if (getAnnualIncome() < 20000.00) {
-			tax = getAnnualIncome() - (getAnnualIncome() - 0.15);
+			tax = getAnnualIncome() - getAnnualIncome() * 0.15;
 		} else if (getAnnualIncome() > 20000.00 && getHealthExpenditures() == 0) {
-			tax = getAnnualIncome() - getAnnualIncome() - 0.25;
+			tax = getAnnualIncome() - getAnnualIncome() * 0.25;
 		} else if (getHealthExpenditures() > 0.00) {
 			tax = getAnnualIncome() * 0.25 - getHealthExpenditures() * 0.5;
 		}
